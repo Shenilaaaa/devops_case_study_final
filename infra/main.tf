@@ -5,7 +5,7 @@ provider "aws" {
 # VPC
 resource "aws_vpc" "main" {
   cidr_block = "10.0.0.0/16"
-  tags = { Name = "myapp-vpc" }
+  tags = { Name = "app2-vpc" }
 }
 
 # Subnet
@@ -14,13 +14,13 @@ resource "aws_subnet" "public" {
   cidr_block              = "10.0.1.0/24"
   availability_zone       = "${var.region}a"
   map_public_ip_on_launch = true
-  tags = { Name = "app-public-subnet" }
+  tags = { Name = "appnew-public-subnet" }
 }
 
 # Internet Gateway
 resource "aws_internet_gateway" "gw" {
   vpc_id = aws_vpc.main.id
-  tags = { Name = "app-igw" }
+  tags = { Name = "appdata-igw" }
 }
 
 # Route Table
@@ -30,7 +30,7 @@ resource "aws_route_table" "public" {
     cidr_block = "0.0.0.0/0"
     gateway_id = aws_internet_gateway.gw.id
   }
-  tags = { Name = "app-public-rt" }
+  tags = { Name = "appnew-public-rt" }
 }
 
 # Route Table Association
@@ -82,7 +82,7 @@ resource "aws_instance" "app" {
     volume_type = "gp3"
   }
 
-  tags = { Name = "devops-indexjs-ec2" }
+  tags = { Name = "devops-case2-ec2" }
 }
 
 # Elastic IP
