@@ -5,7 +5,7 @@ set -euo pipefail
 GIT_COMMIT=$(git rev-parse --short HEAD)
 
 # Define image name using your DockerHub username
-IMAGE="shubhadak/newapp:$GIT_COMMIT"
+IMAGE="shenilaaaa/appnew:$GIT_COMMIT"
 
 echo "[INFO] Building Docker image: $IMAGE"
 docker build -t $IMAGE .
