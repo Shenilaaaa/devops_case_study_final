@@ -9,7 +9,7 @@ pipeline {
         stage('Clone Repository') {
             steps {
                 git branch: 'develop', 
-                url: 'https://github.com/sykharawnte/devops-case-study-app.git'
+                url: 'https://github.com/Shenilaaaa/devops_case_study_final.git'
                 script {
                     // Store Git commit hash right after cloning
                     env.GIT_COMMIT = sh(script: 'git rev-parse --short HEAD', returnStdout: true).trim()
