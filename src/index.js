@@ -1,66 +1,31 @@
+// src/index.js
 const express = require("express");
-const os = require("os");
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000; // Use env port if available
 
+// Basic route
 app.get("/", (req, res) => {
-  const cpuLoad = os.loadavg()[0].toFixed(2);
-  const totalMem = (os.totalmem() / (1024 ** 3)).toFixed(2);
-  const freeMem = (os.freemem() / (1024 ** 3)).toFixed(2);
-  const uptime = (os.uptime() / 3600).toFixed(2);
-
   res.send(`
-    <!DOCTYPE html>
     <html>
       <head>
-        <title>Shenila DevOps Case Study 2</title>
+        <title>DevOps Case Study 2</title>
         <style>
-          body { 
-            font-family: Arial, sans-serif; 
-            text-align: center; 
-            background: #f0f4f9; 
-            color: #333; 
-            padding: 40px;
-          }
+          body { font-family: Arial, sans-serif; text-align: center; padding: 50px; background: #f7f9fc; }
           h1 { color: #2c3e50; }
-          .card {
-            background: white;
-            padding: 20px;
-            margin: 20px auto;
-            width: 400px;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-          }
+          p { color: #34495e; }
         </style>
       </head>
       <body>
-        <h1>Shenila – DevOps Case Study 2</h1>
-        <h3>Implemented with Terraform, Docker, Ansible, and Jenkins</h3>
-
-        <div class="card">
-          <h2>Server Stats</h2>
-          <p><b>CPU Load:</b> ${cpuLoad}</p>
-          <p><b>Total Memory:</b> ${totalMem} GB</p>
-          <p><b>Free Memory:</b> ${freeMem} GB</p>
-          <p><b>Uptime:</b> ${uptime} hrs</p>
-        </div>
-
-        <p>Server running at port ${port}</p>
-        <h3 id="time"></h3>
-
-        <script>
-          function updateTime() {
-            const now = new Date();
-            document.getElementById("time").innerText = now.toLocaleString();
-          }
-          updateTime(); // show immediately
-          setInterval(updateTime, 1000); // update every second
-        </script>
+        <h1>Shenila - DevOps Case Study 2</h1>
+        <p>Running on Node.js + Express</p>
+        <p>Deployed using Terraform, Docker, Ansible & Jenkins</p>
+        <p>✅ CI/CD Pipeline Working!</p>
       </body>
     </html>
   `);
 });
 
+// Start server
 app.listen(port, () => {
-  console.log(\`✅ Server running at http://localhost:\${port}\`);
+  console.log(`✅ Server running at http://localhost:${port}`);
 });
