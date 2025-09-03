@@ -60,7 +60,8 @@ Build & Deploy Docker Image – Creates and runs the Dockerized application
 
 <img width="1920" height="1128" alt="image" src="https://github.com/user-attachments/assets/5a7da06f-d76e-41e1-a7a4-cc733079a99a" />
 
-<img width="1920" height="1128" alt="image" src="https://github.com/user-attachments/assets/133c982b-ce03-46f3-8ac7-d0c302461cbc" />
+![WhatsApp Image 2025-09-03 at 21 38 54_8f4bbd9a](https://github.com/user-attachments/assets/8ae6b765-ccef-44d0-8f87-d289ff886cad)
+
 
 
 
