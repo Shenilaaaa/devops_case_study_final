@@ -45,6 +45,7 @@ terraform apply
 | **GitHub**    | Hosts the repository and integrates with Jenkins via webhook |
 | **Docker**    | Builds and runs the application as a container               |
 
+
 **🔁 Jenkins Pipeline Workflow**
 
 The CI/CD pipeline is described in the Jenkinsfile, and it executes the following stages:
@@ -53,4 +54,11 @@ Terraform Init & Apply – Provisions AWS resources
 Run Ansible Playbook – Configures the server and installs Docker/Jenkins
 Build & Deploy Docker Image – Creates and runs the Dockerized application
 
+<img width="1488" height="405" alt="Screenshot 2025-08-07 191218" src="https://github.com/user-attachments/assets/b77fb2be-e7d2-468e-8c78-493a2d7fb756" />
 
+<img width="1920" height="1128" alt="image" src="https://github.com/user-attachments/assets/cdc96db7-af3e-475d-8688-7799e5e00186" />
+
+<img width="1920" height="1128" alt="image" src="https://github.com/user-attachments/assets/5a7da06f-d76e-41e1-a7a4-cc733079a99a" />
+
+
+<img width="1913" height="999" alt="Screenshot 2025-08-01 205800" src="https://github.com/user-attachments/assets/9da36b42-b536-4146-aad7-3989bb6bf78c" />
